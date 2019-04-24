@@ -1,7 +1,8 @@
-node('master') {pipeline {
+pipeline {
     agent {
         docker {
-            image 'maven:3-alpine' 
+		echo 'file file not text file'
+            image 'maven:3.9-alpine' 
             args '-v /root/.m2:/root/.m2' 
         }
     }
@@ -12,4 +13,4 @@ node('master') {pipeline {
             }
         }
     }
-}}
+}
