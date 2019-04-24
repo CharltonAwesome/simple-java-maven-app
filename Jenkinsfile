@@ -1,8 +1,7 @@
 pipeline {
   agent {
-    docker {
-      args '-v /root/.m2:/root/.m2'
-      image 'openjdk:7-jdk'
+    node {
+      label 'master'
     }
 
   }
